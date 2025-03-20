@@ -47,6 +47,7 @@ const DoctorsList = async (props: SearchParamsProps) => {
   const page = (searchParams?.p || "1") as string;
   const searchQuery = (searchParams?.q || "") as string;
 
+
   const { data, totalPages, totalRecords, currentPage } = await getAllDoctors({
     page,
     search: searchQuery,
@@ -99,12 +100,13 @@ const DoctorsList = async (props: SearchParamsProps) => {
 
           <p className="text-2xl font-semibold">{totalRecords}</p>
           <span className="text-gray-600 text-sm xl:text-base">
-            total doctors
+            مجموع الأطباء
           </span>
         </div>
         <div className="w-full lg:w-fit flex items-center justify-between lg:justify-start gap-2">
           <SearchInput />
           {isAdmin && <DoctorForm />}
+      
         </div>
       </div>
 

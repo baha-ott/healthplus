@@ -42,6 +42,7 @@ interface UserProps {
   publicMetadata: { role: string };
   lastSignInAt: number | string;
 }
+
 const UserPage = async () => {
   const client = await clerkClient();
 
@@ -49,7 +50,8 @@ const UserPage = async () => {
     orderBy: "-created_at",
   });
 
-  if (!data) return null;
+
+  if (!data) return <h1>لا يوجد مستخدمين حاول لاحقاً</h1>;
 
   const renderRow = (item: UserProps) => (
     <tr

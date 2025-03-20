@@ -68,12 +68,6 @@ export const Sidebar = async () => {
           icon: User,
         },
         {
-          name: "الموظفين",
-          href: "/record/staffs",
-          access: ["admin", "doctor"],
-          icon: UserRound,
-        },
-        {
           name: "المرضى",
           href: "/record/patients",
           access: ["admin", "doctor", "nurse"],
@@ -90,12 +84,6 @@ export const Sidebar = async () => {
           href: "/record/medical-records",
           access: ["admin", "doctor", "nurse"],
           icon: SquareActivity,
-        },
-        {
-          name: "المرضى",
-          href: "/nurse/patient-management",
-          access: ["nurse"],
-          icon: Users,
         },
         {
           name: "المواعيد",
